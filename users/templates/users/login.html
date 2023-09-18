@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <form method="POST">
+        {% csrf_token %}
+        Username: {{ form.username}}<br><br>
+        Password: {{form.password}}<br><br>
+        <button type="submit">login</button>
+        {% comment %} <a href="/home" style="background-color: #D3D3D3;color: black;border: 1px solid #000;text-decoration: none;">Login</a> {% endcomment %}
+        {% comment %} <a href="/logout" style="background-color: #D3D3D3;color: black;border: 1px solid #000;text-decoration: none;">LogOut</a> {% endcomment %}
+        <a href="/" style="background-color: #D3D3D3;color: black;border: 1px solid #000;text-decoration: none;">Create Account</a>
+    </form>
+</body>
+</html>
